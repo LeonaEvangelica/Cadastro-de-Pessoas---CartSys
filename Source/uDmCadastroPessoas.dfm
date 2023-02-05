@@ -1,5 +1,6 @@
 object dmCadastroPessoas: TdmCadastroPessoas
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 428
   Width = 505
   object fdConnection: TFDConnection
@@ -13,7 +14,6 @@ object dmCadastroPessoas: TdmCadastroPessoas
       'Port=3050'
       'Server=Localhost'
       'DriverID=FB')
-    Connected = True
     LoginPrompt = False
     Transaction = fdTransaction
     UpdateTransaction = fdTransaction
@@ -36,7 +36,6 @@ object dmCadastroPessoas: TdmCadastroPessoas
     Top = 8
   end
   object fdQueryPessoas: TFDQuery
-    Active = True
     AfterInsert = fdQueryPessoasAfterInsert
     AfterEdit = fdQueryPessoasAfterEdit
     BeforePost = fdQueryPessoasBeforePost

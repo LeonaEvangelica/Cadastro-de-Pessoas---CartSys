@@ -32,6 +32,7 @@ type
     procedure fdQueryPessoasAfterInsert(DataSet: TDataSet);
     procedure fdQueryPessoasAfterEdit(DataSet: TDataSet);
     procedure fdQueryPessoasAfterPost(DataSet: TDataSet);
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
     procedure GenID;
@@ -54,6 +55,17 @@ uses
 {$R *.dfm}
 
 { TdmCadastroPessoas }
+
+procedure TdmCadastroPessoas.DataModuleCreate(Sender: TObject);
+var
+  sCamBD: String;
+begin
+  fdConnection.Close;
+  sCamBD := ExtractFileDir(ExtractFileDir(ExtractFileDir(paramstr(0)))) + '\DB\CARTSYS.FDB';
+  fdConnection.Params.Database := sCamBD;
+  fdConnection.Open;
+  fdQueryPessoas.Open;
+end;
 
 procedure TdmCadastroPessoas.fdQueryPessoasAfterEdit(DataSet: TDataSet);
 begin
