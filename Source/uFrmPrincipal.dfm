@@ -24,12 +24,14 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'Cadastro'
       object CadastrodePessoas1: TMenuItem
         Caption = 'Cadastro de Pessoas'
+        OnClick = CadastrodePessoas1Click
       end
     end
     object Relatrio1: TMenuItem
       Caption = 'Relat'#243'rio'
       object RelatriodePessoas1: TMenuItem
         Caption = 'Relat'#243'rio de Pessoas'
+        OnClick = RelatriodePessoas1Click
       end
     end
   end

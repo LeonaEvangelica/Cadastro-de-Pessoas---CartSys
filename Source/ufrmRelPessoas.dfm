@@ -1,0 +1,554 @@
+object frmRelPessoas: TfrmRelPessoas
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rio de Pessoas'
+  ClientHeight = 77
+  ClientWidth = 251
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlPrincipal: TPanel
+    Left = 0
+    Top = 0
+    Width = 251
+    Height = 77
+    Align = alClient
+    BevelInner = bvLowered
+    BevelKind = bkFlat
+    BevelOuter = bvLowered
+    TabOrder = 0
+    ExplicitLeft = -209
+    ExplicitTop = -231
+    ExplicitWidth = 636
+    ExplicitHeight = 421
+    object btnImprimir: TButton
+      Left = 16
+      Top = 16
+      Width = 83
+      Height = 41
+      Caption = 'Imprimir'
+      TabOrder = 0
+      OnClick = btnImprimirClick
+    end
+    object btnFechar: TButton
+      Left = 153
+      Top = 16
+      Width = 83
+      Height = 41
+      Caption = 'Fechar'
+      TabOrder = 1
+      OnClick = btnFecharClick
+    end
+  end
+  object dsRelatorioPessoas: TDataSource
+    DataSet = dmCadastroPessoas.fdQueryPessoas
+    Left = 8
+    Top = 8
+  end
+  object ppRelatorioPessoas: TppReport
+    AutoStop = False
+    DataPipeline = ppConexao
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.SaveDeviceSettings = False
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 297000
+    PrinterSetup.mmPaperWidth = 210000
+    PrinterSetup.PaperSize = 9
+    Template.FileName = 
+      'C:\Users\danie\OneDrive\Documentos\Programa'#231#227'o\Delphi\Cadastro-d' +
+      'e-Pessoas---CartSys\Source\Relat'#243'rio de Pessoas.rtm'
+    ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+    DeviceType = 'Screen'
+    DefaultFileDeviceType = 'PDF'
+    EmailSettings.ReportFormat = 'PDF'
+    EmailSettings.ConnectionSettings.MailService = 'SMTP'
+    EmailSettings.ConnectionSettings.WebMail.GmailSettings.OAuth2.RedirectPort = 0
+    EmailSettings.ConnectionSettings.WebMail.Outlook365Settings.OAuth2.RedirectPort = 0
+    EmailSettings.ConnectionSettings.EnableMultiPlugin = False
+    LanguageID = 'Default'
+    OpenFile = False
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = True
+    OutlineSettings.Visible = True
+    ThumbnailSettings.Enabled = True
+    ThumbnailSettings.Visible = True
+    ThumbnailSettings.DeadSpace = 30
+    ThumbnailSettings.PageHighlight.Width = 3
+    ThumbnailSettings.ThumbnailSize = tsSmall
+    PDFSettings.EmbedFontOptions = [efUseSubset]
+    PDFSettings.EncryptSettings.AllowCopy = True
+    PDFSettings.EncryptSettings.AllowInteract = True
+    PDFSettings.EncryptSettings.AllowModify = True
+    PDFSettings.EncryptSettings.AllowPrint = True
+    PDFSettings.EncryptSettings.AllowExtract = True
+    PDFSettings.EncryptSettings.AllowAssemble = True
+    PDFSettings.EncryptSettings.AllowQualityPrint = True
+    PDFSettings.EncryptSettings.Enabled = False
+    PDFSettings.EncryptSettings.KeyLength = kl40Bit
+    PDFSettings.EncryptSettings.EncryptionType = etRC4
+    PDFSettings.DigitalSignatureSettings.SignPDF = False
+    PDFSettings.FontEncoding = feAnsi
+    PDFSettings.ImageCompressionLevel = 25
+    PDFSettings.PDFAFormat = pafNone
+    PreviewFormSettings.PageBorder.mmPadding = 0
+    PreviewFormSettings.WindowState = wsMaximized
+    PreviewFormSettings.ZoomPercentage = 200
+    PreviewFormSettings.ZoomSetting = zsPercentage
+    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+    RTFSettings.DefaultFont.Color = clWindowText
+    RTFSettings.DefaultFont.Height = -13
+    RTFSettings.DefaultFont.Name = 'Arial'
+    RTFSettings.DefaultFont.Style = []
+    TextFileName = '($MyDocuments)\Report.pdf'
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    XLSSettings.AppName = 'ReportBuilder'
+    XLSSettings.Author = 'ReportBuilder'
+    XLSSettings.Subject = 'Report'
+    XLSSettings.Title = 'Report'
+    XLSSettings.WorksheetName = 'Report'
+    CloudDriveSettings.DropBoxSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.DropBoxSettings.DirectorySupport = True
+    CloudDriveSettings.GoogleDriveSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.GoogleDriveSettings.DirectorySupport = False
+    CloudDriveSettings.OneDriveSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.OneDriveSettings.DirectorySupport = True
+    Left = 40
+    Top = 8
+    Version = '21.05'
+    mmColumnWidth = 0
+    DataPipelineName = 'ppConexao'
+    object ppHeaderBand1: TppHeaderBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+      object ppLabel1: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label1'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpRight]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'Lista de Pessoas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 18
+        Font.Style = [fsBold]
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 7937
+        mmLeft = 265
+        mmTop = 265
+        mmWidth = 197909
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel2: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label2'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'ID'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5291
+        mmLeft = 265
+        mmTop = 7938
+        mmWidth = 7938
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel3: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label3'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'Nome'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5291
+        mmLeft = 7937
+        mmTop = 7938
+        mmWidth = 67204
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel4: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label4'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'Telefone'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5292
+        mmLeft = 75142
+        mmTop = 7938
+        mmWidth = 32015
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label5'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'Cidade'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5292
+        mmLeft = 107156
+        mmTop = 7938
+        mmWidth = 44715
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel7: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label7'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'UF'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5292
+        mmLeft = 151871
+        mmTop = 7938
+        mmWidth = 10848
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel8: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'Label8'
+        AutoSize = False
+        Border.BorderPositions = [bpLeft, bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        Caption = 'Email'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        TextAlignment = taCentered
+        VerticalAlignment = avCenter
+        mmHeight = 5292
+        mmLeft = 162719
+        mmTop = 7938
+        mmWidth = 35454
+        BandType = 0
+        LayerName = Foreground
+      end
+    end
+    object ppDetailBand1: TppDetailBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 5292
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText1'
+        Border.BorderPositions = [bpLeft, bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'ID'
+        DataPipeline = ppConexao
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 265
+        mmTop = -1
+        mmWidth = 7938
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText2: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText2'
+        Border.BorderPositions = [bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'NOME'
+        DataPipeline = ppConexao
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 7938
+        mmTop = -1
+        mmWidth = 67204
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText3: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText3'
+        Border.BorderPositions = [bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'TELEFONE'
+        DataPipeline = ppConexao
+        DisplayFormat = '!\(99\)\ 00000\-0000;0; '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 75142
+        mmTop = -1
+        mmWidth = 32015
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText4: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText4'
+        Border.BorderPositions = [bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'CIDADE'
+        DataPipeline = ppConexao
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 107156
+        mmTop = -1
+        mmWidth = 44715
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText5: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText5'
+        Border.BorderPositions = [bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'UF'
+        DataPipeline = ppConexao
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        VerticalAlignment = avCenter
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 151871
+        mmTop = -1
+        mmWidth = 10848
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText6: TppDBText
+        DesignLayer = ppDesignLayer1
+        UserName = 'DBText6'
+        Border.BorderPositions = [bpTop, bpRight, bpBottom]
+        Border.Visible = True
+        Border.mmPadding = 0
+        DataField = 'EMAIL'
+        DataPipeline = ppConexao
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppConexao'
+        mmHeight = 5292
+        mmLeft = 162719
+        mmTop = -1
+        mmWidth = 35454
+        BandType = 4
+        LayerName = Foreground
+      end
+    end
+    object ppFooterBand1: TppFooterBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 3969
+      mmPrintPosition = 0
+    end
+    object ppDesignLayers1: TppDesignLayers
+      object ppDesignLayer1: TppDesignLayer
+        UserName = 'Foreground'
+        LayerType = ltBanded
+        Index = 0
+      end
+    end
+    object ppParameterList1: TppParameterList
+    end
+  end
+  object ppConexao: TppDBPipeline
+    DataSource = dsRelatorioPessoas
+    UserName = 'Conexao'
+    Left = 72
+    Top = 8
+    object ppConexaoppField1: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'ID'
+      FieldName = 'ID'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 0
+    end
+    object ppConexaoppField2: TppField
+      FieldAlias = 'Nome'
+      FieldName = 'NOME'
+      FieldLength = 500
+      DisplayWidth = 500
+      Position = 1
+    end
+    object ppConexaoppField3: TppField
+      FieldAlias = 'Logradouro'
+      FieldName = 'LOGRADOURO'
+      FieldLength = 500
+      DisplayWidth = 500
+      Position = 2
+    end
+    object ppConexaoppField4: TppField
+      FieldAlias = 'S/N?'
+      FieldName = 'SEMNUMERO'
+      FieldLength = 1
+      DisplayWidth = 1
+      Position = 3
+    end
+    object ppConexaoppField5: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'N'#250'mero'
+      FieldName = 'NUMERO'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 4
+    end
+    object ppConexaoppField6: TppField
+      FieldAlias = 'Bairro'
+      FieldName = 'BAIRRO'
+      FieldLength = 150
+      DisplayWidth = 150
+      Position = 5
+    end
+    object ppConexaoppField7: TppField
+      FieldAlias = 'Cidade'
+      FieldName = 'CIDADE'
+      FieldLength = 150
+      DisplayWidth = 150
+      Position = 6
+    end
+    object ppConexaoppField8: TppField
+      FieldAlias = 'UF'
+      FieldName = 'UF'
+      FieldLength = 2
+      DisplayWidth = 2
+      Position = 7
+    end
+    object ppConexaoppField9: TppField
+      FieldAlias = 'Telefone'
+      FieldName = 'TELEFONE'
+      FieldLength = 11
+      DisplayWidth = 11
+      Position = 8
+    end
+    object ppConexaoppField10: TppField
+      FieldAlias = 'Email'
+      FieldName = 'EMAIL'
+      FieldLength = 300
+      DisplayWidth = 300
+      Position = 9
+    end
+  end
+end

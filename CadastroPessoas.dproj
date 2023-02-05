@@ -104,14 +104,18 @@
             <Form>frmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\uFrmCadastroProdutos.pas">
-            <Form>frmCadastroProdutos</Form>
+        <DCCReference Include="Source\uFrmCadastroPessoas.pas">
+            <Form>frmCadastroPessoas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\uDmCadastroProdutos.pas">
-            <Form>DataModule1</Form>
+        <DCCReference Include="Source\uDmCadastroPessoas.pas">
+            <Form>dmCadastroPessoas</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Source\ufrmRelPessoas.pas">
+            <Form>frmRelPessoas</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
